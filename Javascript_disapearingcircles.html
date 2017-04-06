@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+     
+   <style type="text/css">
+        
+       #wrap {
+           border: 1px solid white;
+           width: 570px;
+           height: 400px;
+           background: #CCCCCC;
+           margin: 20px auto;
+       }
+        
+       .circlestyle {
+           position: relative;
+           width: 150px;
+           height: 150px;
+           margin: 20px;
+           border-radius: 50%;
+           float: left;
+           top: 25%;
+       }
+       
+       #circle1 {
+           background: red;
+       }
+       
+       #circle2 {
+           background: yellow;
+       }
+       
+       #circle3 {
+           background: green;
+           
+       }
+       
+       #appear {
+           position: relative;
+           margin: 20px auto;
+           width: 100px;
+           
+       }
+        
+        </style>
+        
+    </head>
+    <body>
+        <button id="appear">Re-appear</button>
+     <div id="wrap">
+        
+          <div id="circle1" class="circlestyle"></div>
+          <div id="circle2" class="circlestyle"></div>
+          <div id="circle3" class="circlestyle"></div>
+         
+   </div>
+        
+        
+        
+       <script type="text/javascript">
+    
+            document.getElementById("circle1").onclick = function() {
+                document.getElementById("circle1").style.display = "none";
+              
+            }
+            
+              document.getElementById("circle2").onclick = function() {
+                document.getElementById("circle2").style.display = "none";
+            }
+              
+                document.getElementById("circle3").onclick = function() {
+                document.getElementById("circle3").style.display = "none";
+            }
+                
+            
+          document.getElementById("appear").onclick = function() {
+              document.getElementById("circle1").style.display = "block";
+          
+                document.getElementById("appear").onclick = function() {
+              document.getElementById("circle2").style.display = "block";
+          
+                 document.getElementById("appear").onclick = function() {
+              document.getElementById("circle3").style.display = "block";
+                 }
+                }
+          }
+          
+        
+              
+             
+          
+        
+    </script>      
+        
+    </body>
+</html>

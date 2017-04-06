@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+     
+   <style type="text/css">
+    
+       
+       #wrap {
+           border: 1px solid #db5a9a;
+           position: relative;
+           width: 498px;
+           height: 298px;
+           margin: 20px auto;
+           background: #db5a9a;
+           border-radius: 50px;
+           
+       }
+       
+       #gametitle {
+           width: 350px;
+           position: relative;
+           font-family: Arial;
+           color: #FFFFFF;
+           font-size: 20px;
+           margin: 30px auto;
+           font-weight: bold;
+       }
+        
+       #guess {
+           display: block;
+           position: relative;
+           margin: 20px auto;
+           width: 100px;
+           height: 50px;
+           padding: 10px;
+           border-radius: 30px;
+           border-style: none;
+           text-align: center;
+           color: darkorchid;
+           font-weight: bold;
+           
+       }
+       
+       textarea:focus, input:focus{
+           outline: none;
+        }
+       
+       #placeholder {
+           font-size: 14px;
+       }
+       
+       input {
+           font-size: 16px;
+       }
+       
+       
+       #submit {
+           position: relative;
+           width: 80px;
+           height: 30px;
+           margin: 0px auto;
+           display: block;
+           top: -40px;  
+           background: #b2006e;
+           border-style: none;
+           border-radius: 30px;
+           color: #FFFFFF;
+           font-weight: bold;
+           font-family: Arial;
+           
+       }
+       
+       button:focus {outline:0;
+       }
+       
+        </style>
+        
+        
+        
+    </head>
+    <body>
+ 
+        <div id="wrap">
+                <p id="gametitle">How many fingers am I holding up?</p>
+
+                    <input id="guess" type="text" placeholder="Guess?">
+<br><br>
+                <button id="submit">CHECK</button>
+        </div>
+        
+        
+        
+       <script type="text/javascript">
+    
+        
+       document.getElementById("submit").onclick = function() {
+           
+           var guess = document.getElementById("guess").value;
+           var randomfinger = Math.floor((Math.random() * 5) + 1);
+           
+           if (guess == randomfinger) {
+               alert("Well done")
+           } else {
+               alert("Nope, I'm holding up " + randomfinger + "! Try again")
+           }
+           
+           
+           
+       }
+            
+            
+            
+            
+            
+        
+    </script>      
+        
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+     
+   <style type="text/css">
+        
+       #appear {
+           display: none;
+           
+       }
+       
+       
+       #wrap {
+           position: relative;
+           margin: 50px auto;
+           width: 400px;
+           height: 400px;
+           font-family: Arial;
+           font-size: 25px;
+           color: #CCCCCC;
+           text-align: center;
+       }
+       
+       button {
+           background: #c7c2c2;
+           padding: 10px;
+           color: #FFFFFF;
+           font-family: Arial;
+           border: none;
+           margin: 10px auto;
+       }
+       
+      
+       
+        </style>
+        
+    </head>
+    <body>
+       
+        
+    <div id="wrap">    
+        
+        <p id="text">Be careful</p>
+        
+        <button id="button1">CLICK ME</button>
+        
+        <button id="appear">STOP CLICKING ME!!!</button>
+        
+
+        
+        </div>
+        
+        
+        
+       <script type="text/javascript">
+           
+           
+    
+    document.getElementById("button1").onclick = function() {
+        document.getElementById("text").innerHTML = "I wouldn't do that if I were you!!!";
+           document.getElementById("button1").innerHTML = "DON'T CLICK ME AGAIN";
+            document.getElementById("button1").onclick = function() {
+              document.getElementById("appear").style.display = "block"; }
+                  
+            
+     }
+        
+      document.getElementById("appear").onclick =  function() {
+          document.getElementById("text").innerHTML = "Raccoon Rebel!"
+           document.getElementById("button1").style.display = "none";
+            document.getElementById("appear").style.display = "none";
+     }
+     
+    
+    </script>      
+        
+    </body>
+</html>
